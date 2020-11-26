@@ -29,7 +29,7 @@
 .slot >.value{
     z-index: 3;
     animation-name: slotspin;
-    animation-iteration-count: 10;
+    animation-iteration-count: infinite;
     animation-duration: .7s;
 }
 
