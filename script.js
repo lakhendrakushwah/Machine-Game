@@ -1,17 +1,20 @@
+window.onload = function(){
 
-
-let value1 = document.getElementById('value1')
-let value2 = document.getElementById('value2')
-let value3 = document.getElementById('values3')
+var value1 = document.getElementById('value1')
+var value2 = document.getElementById('value2')
+var value3 = document.getElementById('value3')
 let inpspeed = document.getElementById('inpspeed')
 
 
-let values = [    '😂' , '🙄' , '😎' , '🤩' , '😡' , '😤 ', '😭 ' ]
+let values = [  '😂' , '🙄' , '😎' , '😡' , '😤 ', '😭 ' ]
 
 
 function getRendomValue(){
-   return values[Math.floor(Math.random() * 7)]
+   let k =  Math.random() * 6;
+   let p = Math.floor(k);
+   return values[p] 
 }
+console.log(getRendomValue())
 
 setInterval( function(){
     value1.innerText = getRendomValue()
@@ -19,4 +22,7 @@ setInterval( function(){
     value3.innerText = getRendomValue()
 
 },100)
+//'😂' , '🙄' , '😎' , '🤩' , '😡' , '😤 ', '😭 '
 
+
+}
