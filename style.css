@@ -1,4 +1,6 @@
-
+:root{
+    --speed: 5;
+}
 
 .machine{
     background-color: peru;
@@ -30,7 +32,7 @@
     z-index: 3;
     animation-name: slotspin;
     animation-iteration-count: infinite;
-    animation-duration: .7s;
+    animation-duration: calc(1s / var(--speed));
 }
 
 #inpspeed {
