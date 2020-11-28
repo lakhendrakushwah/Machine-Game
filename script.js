@@ -21,7 +21,35 @@ setInterval( function(){
     value2.innerText = getRendomValue()
     value3.innerText = getRendomValue()
 
-},100)
+},300)
+
+let animationId;
+function updateAnimation (newSpeed) {
+    if (animationId) clearInterval (animationId)
+
+    animationId =  setInterval( function(){
+        value1.innerText = getRendomValue()
+        value2.innerText = getRendomValue()
+        value3.innerText = getRendomValue()
+    
+    }, 1000/newSpeed )
+}
+
+
+
+
+inpspeed.onchange = function(event){
+    // document.documentElement==> This is " :root " of css
+    document.documentElement.style.setProperty('--speed', event.target.value)
+    updateAnimation(event.target.value)
+
+}
+
+
+
+
+
+
 //'😂' , '🙄' , '😎' , '🤩' , '😡' , '😤 ', '😭 '
 
 
